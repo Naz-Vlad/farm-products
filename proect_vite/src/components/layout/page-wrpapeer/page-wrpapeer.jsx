@@ -1,4 +1,4 @@
-import Header from "../../header/header"
+import Header from "/src/components/layout/header/header"
 import MainPage from "../main/main-page"
 
 function PageWrpapeer() {
