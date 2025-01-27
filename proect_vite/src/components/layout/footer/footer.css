@@ -1,11 +1,12 @@
-.header {
-	width: 1280px;
+
+.footer {
+  width: 1280px;
 	min-height: 80px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 18px 90px;
+	padding: 18px 86px;
 	box-sizing: border-box;
-	background-color:azure;
+	background-color: azure;
 }
