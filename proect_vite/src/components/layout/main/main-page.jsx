@@ -1,4 +1,4 @@
-import About from "../blocks/about/about"
+import About from "/src/components/blocks/about/about"
 
 
 

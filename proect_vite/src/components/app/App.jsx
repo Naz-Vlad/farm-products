@@ -1,4 +1,4 @@
-import PageWrpapeer from './components/layout/page-wrpapeer/page-wrpapeer'
+import PageWrpapeer from "../layout/page-wrpapeer/page-wrpapeer"
 import './App.css'
 
 function App() {
