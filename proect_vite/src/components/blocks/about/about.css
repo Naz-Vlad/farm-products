@@ -1,8 +1,9 @@
 .about {
+	position: relative;
 	width: 1280px;
 	margin: 0 auto;
-	padding-left: 90px;
-	padding-right: 90px;
+	min-height: 600px;
+	padding: 183px 90px;
 	background-color: #D8ECFE;
 	box-sizing: border-box;
 }
@@ -10,8 +11,34 @@
 .about__text {
 	margin: 0;
 	padding: 0;
+	max-width: 538px
 }
 
 .about__wrapper {
 	max-width: 637px;
+}
+
+.about::before {
+	position: absolute;
+  bottom: 0;
+  right: 177px;
+	display: block;
+	width: 274px;
+	height: 563px;
+	content: "";
+	background-image: url('/src/assets/avatar.svg');
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+.about::after {
+	position: absolute;
+	top: 77px;
+	right: 90px;
+	width: 446px;
+	height: 446px;
+	border-radius: 50%;
+	content: "";
+	background-color:#C4E2FF;
+	z-index: 0;
 }
