@@ -1,12 +1,12 @@
 import AdvantagesList from "../../blocks/advantages-list/advantages-list"
-import About from "/src/components/blocks/about/about"
+import Hero from "../../blocks/hero/hero"
 
 
 
 function MainPage() {
 	return (
     <main>
-      <About/>
+      <Hero/>
 			<AdvantagesList/>
 		</main>
 	)

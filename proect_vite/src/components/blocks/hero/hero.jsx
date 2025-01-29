@@ -1,7 +1,7 @@
 import Title, { TitleSize } from '../../ul/title/title'
-import './about.css'
+import './hero.css'
 
-function About() {
+function Hero() {
 	return (
     <section className="about">
       <div className="about__wrapper">
@@ -14,4 +14,4 @@ function About() {
 	)
 }
 
-export default About
+export default Hero
