@@ -1,0 +1,10 @@
+.advantages {
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+	width: 1280px;
+	margin: 0 auto;
+	padding: 100px 90px;
+	background-color: #ffffff;
+  box-sizing: border-box;
+}

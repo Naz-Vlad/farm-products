@@ -11,7 +11,8 @@
 .about__text {
 	margin: 0;
 	padding: 0;
-	max-width: 538px
+	max-width: 538px;
+  margin-top: 24px;
 }
 
 .about__wrapper {
