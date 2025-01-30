@@ -1,8 +1,9 @@
-import PageWrpapeer from "../layout/page-wrpapeer/page-wrpapeer"
+import PageWrpapeer from "../layout/page-wrapper/page-wrapper";
+import advantages from "/src/data/advantages";
 import './App.css'
 
 function App() {
-  return  <PageWrpapeer/>
+  return  <PageWrpapeer advantages = {advantages}/>
 }
 
 export default App

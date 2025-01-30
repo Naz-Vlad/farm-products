@@ -1,13 +1,21 @@
 import './advantage-card.css'
 import Title, {TitleSize} from '../title/title'
 
-function AdvantageCard() {
+function AdvantageCard(title, // название особенности
+  owner, // владелец особенности (обычный магазин, фермерский)
+  about, // описание особенности
+  isNegative, // является ли особенность отрицательной
+  image) // иконка
+	 {
 	return (
     <section className="advantage"> {/*обертка карточки */}
 			<header className="advantage__header"> {/*шапка карточки */}
 				<img className ='advantage__img'
-				  src="/src/assets/Group.svg"
-				/> {/*картинка */}
+				  src={image}
+					width={56}
+          height={56}
+          alt={title}
+				/> {/*иконка*/}
 				<div> {/*обертка для span */}
           <span className='advantage__farmer'>Фермерские продукты</span> {/*чей продукт */}
 					<Title size={TitleSize.SMALL}>Еда намного вкуснее</Title> {/*заголовок */}

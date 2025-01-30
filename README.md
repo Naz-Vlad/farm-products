@@ -10,7 +10,9 @@
 					return (
 						<>
 шапка				  <Header/>
-главная		    <MainPage/>
+              <main className="page-wrapper__main">
+главная		      <MainPage/>
+              </main>
 подвал		    <Footer/>
 						</>
 					)
@@ -88,5 +90,90 @@ function AdvantageCard() {
 #	 </section>
 	)
 }
+
+#    6 - Шаблонизируеь созданные компоненты данными. От данных на главной странице будет зависеть только список проимуществ:
+
+const advantages = [
+  {
+    id: 0,
+    title: "Еда намного вкуснее",
+    owner: "Фермерские продукты",
+    isNegative: false,
+    image: "/src/assets/icon-1.svg",
+    about:
+      "Домашняя колбаса из мяса, соли и специй и колбаса из магазина два настолько разных продукта, что они даже не родственники"
+  },
+  {
+    id: 1,
+    title: "Просроченные продукты",
+    owner: "Магазинные продукты",
+    isNegative: true,
+    image: "/src/assets/icon-2.svg",
+    about:
+      "Из-за большого количества товара сотрудники магазинов нe успевают своевременно производить замену товара"
+  },
+  {
+    id: 3,
+    title: "Натуральные продукты",
+    owner: "Фермерские продукты",
+    isNegative: false,
+    image: "/src/assets/icon-3.svg",
+    about:
+      "Поставляем местные органические продукты, выращенные без пестицидов и химических удобрений."
+  },
+  {
+    id: 4,
+    title: "Некачественное мясо",
+    owner: "Магазинные продукты",
+    isNegative: true,
+    image: "/src/assets/icon-4.svg",
+    about:
+      "Мясные полуфабрикаты, в которых содержится чрезмерно много натрия, вредных жиров, консервантов"
+  }
+];
+
+export default advantages
+
+#   7 - Подключим [advantages] в компонент [App] и передаем их в [PageWrpapeer]
+
+#   import advantages from "/src/data/advantages";
+
+						function App() {
+#							return  <PageWrpapeer advantages = {advantages}/> // передаем компанену данные
+						}
+
+#      7.1 прокидываем данные в [PageWrpapeer] и передаем их в [MainPage]
+
+#						function PageWrpapeer({advantages}) {
+							return (
+								<>
+									<Header/>
+                  <main className="page-wrapper__main">
+#                   <MainPage advantages = {advantages} />
+			            </main>
+									<Footer/>
+								</>
+							)
+						}
+
+#        7.2 прокидываем данные в [MainPage] и передаем их в [AdvantagesList]
+
+#						function MainPage(advantages) {
+							return (
+								<>
+									<Hero/>
+#									<AdvantagesList advantage = {advantages} />
+								</main>
+							)
+						}
+
+#         7.3 прокидываем данные в [AdvantagesList] и передаем их в фукцию:
+#             {advantages.map((advantage) => (
+#               <li className="advantages__item" key={advantage.id}>
+#                 <AdvantageCard {...advantage} />
+#               </li>
+#             ))}
+
+
 
 

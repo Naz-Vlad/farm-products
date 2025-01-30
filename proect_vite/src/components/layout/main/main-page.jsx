@@ -1,14 +1,13 @@
-import AdvantagesList from "../../blocks/advantages-list/advantages-list"
-import Hero from "../../blocks/hero/hero"
+import AdvantagesList from "../../blocks/advantages-list/advantages-list";
+import Hero from "../../blocks/hero/hero";
 
 
-
-function MainPage() {
+function MainPage(advantages) {
 	return (
-    <main>
+    <div>
       <Hero/>
-			<AdvantagesList/>
-		</main>
+			<AdvantagesList advantage = {advantages} />
+		</div>
 	)
 }
 
