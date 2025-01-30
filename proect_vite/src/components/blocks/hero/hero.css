@@ -1,4 +1,4 @@
-.about {
+.hero {
 	position: relative;
 	width: 1280px;
 	margin: 0 auto;
@@ -8,18 +8,18 @@
 	box-sizing: border-box;
 }
 
-.about__text {
+.hero__text {
 	margin: 0;
 	padding: 0;
 	max-width: 538px;
   margin-top: 24px;
 }
 
-.about__wrapper {
+.hero__wrapper {
 	max-width: 637px;
 }
 
-.about::before {
+.hero::before {
 	position: absolute;
   bottom: 0;
   right: 177px;
@@ -32,7 +32,7 @@
 	z-index: 1;
 }
 
-.about::after {
+.hero::after {
 	position: absolute;
 	top: 77px;
 	right: 90px;

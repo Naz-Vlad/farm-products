@@ -6,16 +6,18 @@
   line-height: 41px;
 }
 
-
+.title_big {
+  line-height: 50px;
+  font-size: 44px;
+}
 
 .title_small {
   line-height: 18px;
   font-size: 27px;
 }
 
-.title_big {
-  line-height: 50px;
-  font-size: 44px;
+.title_extra_small {
+  font-size: 18px;
+  line-height: 27px;
 }
-
 

@@ -1,27 +1,26 @@
 import './advantage-card.css'
 import Title, {TitleSize} from '../title/title'
 
-function AdvantageCard(title, // название особенности
-  owner, // владелец особенности (обычный магазин, фермерский)
-  about, // описание особенности
-  isNegative, // является ли особенность отрицательной
-  image) // иконка
-	 {
+function AdvantageCard({title, owner, about, isNegative, image}) {
 	return (
-    <section className="advantage"> {/*обертка карточки */}
-			<header className="advantage__header"> {/*шапка карточки */}
+    <section className={`advantage${isNegative ? " advantage_negative" : ""}`}>
+			<header className="advantage__header">
 				<img className ='advantage__img'
 				  src={image}
 					width={56}
           height={56}
           alt={title}
-				/> {/*иконка*/}
-				<div> {/*обертка для span */}
-          <span className='advantage__farmer'>Фермерские продукты</span> {/*чей продукт */}
-					<Title size={TitleSize.SMALL}>Еда намного вкуснее</Title> {/*заголовок */}
+				/>
+				<div>
+				 <span className={`advantage__owner${isNegative ? " advantage__owner_negative" : ""}`}> {owner}
+          </span>
+					<Title size={TitleSize.EXTRA_SMALL}>{title}</Title> {/*заголовок */}
 				</div>
 			</header>
-			<p className="advantage__text">Домашняя колбаса из мяса, соли и специй и колбаса из магазина — два настолько разных продукта, что они даже не родственники</p>{/*текст карточки */}
+			<p
+        className="advantage__text"
+        dangerouslySetInnerHTML={{ __html: about }}
+      />{/*текст карточки */}
 		</section>
 	)
 }

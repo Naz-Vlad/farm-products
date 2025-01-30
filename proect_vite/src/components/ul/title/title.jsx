@@ -2,9 +2,10 @@ import './title.css'
 
 // создаем объект для размера загаловков, ключ - значение
 export const TitleSize = { // РазмерТекста
-  BIG: "big",      //// TitleSize.BIG, то класс заголовка - .title_big
-  SMALL: "small",  // TitleSize.SMALL, то класс заголовка - .title_small
-  DEFAULT: ""      //TitleSize.DEFAULT, то класс заголовка - .title
+  BIG: "big",      // TitleSize.BIG, то класс заголовка - .title_big - большой
+	MEDIUM: "medium",// TitleSize.MEDIUM,то класс заголовка - .title_medium - средний
+  SMALL: "small",  // TitleSize.SMALL, то класс заголовка - .title_small - маленький
+  EXTRA_SMALL: "extra_small" //TitleSize.EXTRA_SMALL, то класс заголовка - .title_extra_small - экстра маленький
 };
 
 

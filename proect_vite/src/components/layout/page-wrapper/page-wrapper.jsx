@@ -5,13 +5,13 @@ import './page-wrapper.css'
 
 function PageWrpapeer({advantages}) {
 	return (
-		<div>
+		<>
 		  <Header/>
 			<main className="page-wrapper__main">
         <MainPage advantages = {advantages} />
 			</main>
 			<Footer/>
-		</div>
+		</>
 	)
 }
 

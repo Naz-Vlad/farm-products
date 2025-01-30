@@ -2,11 +2,11 @@ import AdvantagesList from "../../blocks/advantages-list/advantages-list";
 import Hero from "../../blocks/hero/hero";
 
 
-function MainPage(advantages) {
+function MainPage({advantages}) {
 	return (
     <div>
       <Hero/>
-			<AdvantagesList advantage = {advantages} />
+			<AdvantagesList advantages = {advantages} />
 		</div>
 	)
 }

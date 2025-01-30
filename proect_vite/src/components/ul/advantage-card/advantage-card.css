@@ -19,7 +19,7 @@
 	margin-right: 20px;
 }
 
-.advantage__farmer {
+.advantage__owner {
    display: inline-block;
 	 font-size: 14px;
 	 line-height: 25px;
@@ -30,6 +30,10 @@
 	 text-align: center;
 	 padding: 2px 10px;
 	 margin-bottom: 4px;
+}
+
+.advantage__owner_negative {
+  background-color: #f75531;
 }
 
 .advantage__text {

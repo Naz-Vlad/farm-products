@@ -3,19 +3,19 @@ import Button from '../../ul/button/button';
 import AdvantageCard from '../../ul/advantage-card/advantage-card';
 import './advantages-list.css';
 
-function AdvantagesList(advantages) {
-	return advantages && advantages.length ? ( // проверяем данные на массив объектов
+function AdvantagesList({ advantages }) {
+  return advantages && advantages.length ? (
     <section className="advantages">
-			<Title>Почему фермерские продукты лучше?</Title>
-			<ui className = "advantages__list">
-			  {advantages.map ((advantage) => ( //методом map пепебирая каждый элемент масива advantages карточек превращаем каждую карточку в компанент advantage.на экран будет выведено столько карточек, сколько есть элементов в массиве advantages
-          <li className="advantages__item" key={advantage.id}>
-            <AdvantageCard {...advantage} /> {/* каждый компанент карточки в массиве заполняем данными по idkey={advantage.id */}
+      <Title>Почему фермерские продукты лучше?</Title>
+      <ul className="advantages__list">
+        {advantages.map((advantage) => (
+          <li className ="advantages__item" key={advantage.id}>
+            <AdvantageCard {...advantage} />
           </li>
         ))}
-			</ui>
+      </ul>
       <Button>Купить</Button>
-		</section>
+    </section>
   ) : null;
 }
 
