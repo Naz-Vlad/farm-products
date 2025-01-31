@@ -42,8 +42,8 @@
 #				function MainPage() {
 					return (
 ^						<main>
-герой				  <Hero/> // делаем компанент блока герой [<Hero/>]
-проимущества	<AdvantagesList/>//делаем комп. блока проимущества [<AdvantagesList/>]
+герой				  <Hero/>// делаем компанент блока герой [<Hero/>]
+проимущества	<AdvantagesList/>// делаем комп. для списка проим. [<AdvantagesList/>]
 ^						</main>
 					)
 				}
@@ -51,16 +51,15 @@
 
 ^             пошаговое описание блока проимущества [<AdvantagesList/>]
 
-   1 - 5.2 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
+^     1 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
 
-				function AdvantagesList() {
+#				function AdvantagesList() {
 					return (
-^						<section className="advantages">
+^					<section className="advantages">
 ^							<Title>Почему фермерские продукты лучше?</Title>
-^							<ui className = "advantages__list">
-^								<li className="advantages__item">
-                  5.2.1 делаем функцию для компанента карточи [<AdvantageCard/>]
-проимущество 		  <AdvantageCard/>
+^							<ui className = "advantages__list"> // блок списка карточек
+^								<li className="advantages__item"> // блок карточки
+проимущество 		  <AdvantageCard/> // делаем комп. карточки проим. [<AdvantageCard/> ]
 ^								</li>
 ^							</ui>
 ^							<Button>Купить</Button>
