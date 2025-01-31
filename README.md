@@ -16,7 +16,9 @@
 					)
 				}
 
-*   3 - делаем функцию для компанента шапка [<Header/>]
+ ------------------------------------------------------------------------
+
+3 - делаем функцию для компанента шапка [<Header/>]
 
 #				function Header() {
 					return (
@@ -27,7 +29,9 @@
 					)
 				}
 
-*   4 - делаем функцию для компанента падвал [<Footer/>]
+  --------------------------------------------------------------------------
+
+4 - делаем функцию для компанента падвал [<Footer/>]
 
 #				function Footer() {
 					return (
@@ -37,7 +41,10 @@
 ^						</footer>
 					)
 				}
-*   5 - делаем функцию для компанента [<MainPage/>]
+
+---------------------------------------------------------------------------------------
+
+5 - делаем функцию для компанента [<MainPage/>]
 
 #				function MainPage() {
 					return (
@@ -47,11 +54,10 @@
 ^						</main>
 					)
 				}
-           --------------------------------------------------------
 
-^             пошаговое описание блока проимущества [<AdvantagesList/>]
+-----------------------------------------------------------------------------
 
-^     1 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
+6 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
 
 #				function AdvantagesList() {
 					return (
@@ -67,24 +73,28 @@
 					)
 				}
 
-:      5.2.1 делаем функцию для компанента карточи проимущества[<AdvantageCard/>]
+------------------------------------------------------------------------------------------
 
-function AdvantageCard() {
-	return (
-#  <section className="advantage"> //обертка карточки
-#		 <header className="advantage__header"> //шапка карточки
-#			 <img className ='advantage__img' src="/src/assets/Group.svg"/> //картинка
-#			 <div> {/*обертка для span */}
-#        <span className='advantage__farmer'>Фермерские продукты</span>//производитель
-#				 <Title size={TitleSize.SMALL}>Еда намного вкуснее</Title> // заголовок
-#			 </div>
-#		 </header>
-#		 <p className="advantage__text">текст карточки</p> //текст карточки
-#	 </section>
-	)
-}
+7 делаем функцию для компанента карточи проимущества[<AdvantageCard/>]
 
-#    6 - Шаблонизируеь созданные компоненты данными. От данных на главной странице будет зависеть только список проимуществ:
+# function AdvantageCard() {
+	 return (
+  ^  <section className="advantage"> //обертка карточки
+  ^		 <header className="advantage__header"> //шапка карточки
+  ^			 <img className ='advantage__img' src="/src/assets/Group.svg"/> // иконка карточки
+  ^			 <div> // обертка для span и Title
+  ^        <span className='advantage__farmer'>Фермерские продукты</span> //производитель
+  ^				 <Title size={TitleSize.SMALL}>Еда намного вкуснее</Title> // заголовок
+  ^			 </div>
+  ^		 </header>
+  ^		 <p className="advantage__text">текст карточки</p> //текст карточки
+  ^	 </section>
+    )
+  }
+
+  --------------------------------------------------------------------------------------------
+
+8 - Шаблонизируем созданные компоненты данными. От данных на главной странице будет зависеть только список проимуществ:
 
 const advantages = [
   {
@@ -127,46 +137,74 @@ const advantages = [
 
 export default advantages
 
-#   7 - Подключим [advantages] в компонент [App] и передаем их в [PageWrpapeer]
+    ------------------------------------------------------------------------------------
 
-#   import advantages from "/src/data/advantages";
+9 - Подключим ланные [advantages] в компонент [App] и передаем их в [PageWrpapeer]
+
+     import advantages from "/src/data/advantages";
 
 						function App() {
-#							return  <PageWrpapeer advantages = {advantages}/> // передаем компанену данные
+^							return  <PageWrpapeer advantages = {advantages}/> // передаем компанену данные
 						}
 
-#      7.1 прокидываем данные в [PageWrpapeer] и передаем их в [MainPage]
+    ----------------------------------------------------------------------------------------
 
-#						function PageWrpapeer({advantages}) {
+10 - прокидываем в параметры [PageWrpapeer] и прокидывае их в [MainPage]
+
+*               передаем в параметры данныене [не забываем про {}]
+#            function PageWrpapeer({advantages}) {
 							return (
 								<>
 									<Header/>
                   <main className="page-wrapper__main">
-#                   <MainPage advantages = {advantages} />
+^                   <MainPage advantages = {advantages} />  // прокидываем данные в компанент
 			            </main>
 									<Footer/>
 								</>
 							)
 						}
 
-#        7.2 прокидываем данные в [MainPage] и передаем их в [AdvantagesList]
+-----------------------------------------------------------------------------------------------
 
-#						function MainPage(advantages) {
+11 - прокидываем данные в [MainPage] и передаем их в [AdvantagesList]
+
+               передаем в параметры данныене [не забываем про {}]
+#						function MainPage({advantages}) {
 							return (
 								<>
 									<Hero/>
-#									<AdvantagesList advantage = {advantages} />
+^									<AdvantagesList advantage = {advantages} /> // прокидываем данные в компанент
 								</main>
 							)
 						}
 
-#         7.3 прокидываем данные в [AdvantagesList] и передаем их в фукцию:
-#             {advantages.map((advantage) => (
-#               <li className="advantages__item" key={advantage.id}>
-#                 <AdvantageCard {...advantage} />
-#               </li>
-#             ))}
+ --------------------------------------------------------------------------------------------------
 
+12 - прокидываем данные в [AdvantagesList] и передаем их в фукцию
+	12.1 - проверяем данные на массив
+  12.2-каждый объект массива [advantages] превращаем в компонент [advantage]. Используем для этого [map]
 
+       передаем в параметры данныене [не забываем про {}]
+#		function AdvantagesList({ advantages }) {
 
+#		  return  advantages && advantages.length ? ( // 12.1-проверяем даные на массив
+				<section className="advantages">
+					<Title>Почему фермерские продукты лучше?</Title>
+					<ul className="advantages__list">
+#					  {advantages.map((advantage) => (
+^  12.2-каждый объект массива [advantages] превращаем в компонент [advantage]. Используем для этого [map]
+^							<li className ="advantages__item" key={advantage.id}> // заполнение карточек по id объекта
+#								<AdvantageCard {...advantage} /> // передаем массив обьектов
+							</li>
+^       на экран будет выведено столько карточек, сколько есть объектов в массиве [advantages]
+						))}
+					</ul>
+					<Button>Купить</Button>
+				</section>
+#			) : null; // 12.1-проверяем даные на массив
+		}
+
+		-------------------------------------------------------------------------------------------------
+
+13 -
 
