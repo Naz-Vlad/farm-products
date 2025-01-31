@@ -4,7 +4,7 @@
 
 *	  2 - делаем функцию компанента центровщика страницы [PageWrpapeer], и записываем    компанент [<PageWrpapeer/>] в [App]
 
-     		function PageWrpapeer() {
+#     		function PageWrpapeer() {
 					return (
 						<>
 шапка				  <Header/>
@@ -18,61 +18,57 @@
 
 *   3 - делаем функцию для компанента шапка [<Header/>]
 
-				function Header() {
+#				function Header() {
 					return (
-						<header className="header">
-^						  3.1 делаем функцию для компанента доготип [<Logo/>]
-логотип		    <Logo/>
-^             3.2 делаем функцию для компанента навигация [<Nav/>]
-навигация		  <Nav/>
-						</header>
+^						<header className="header">
+логотип		    <Logo/> // делаем компанент доготип [<Logo/>]
+навигация		  <Nav/>  // делаем  компанент навигация [<Nav/>]
+^						</header>
 					)
 				}
 
 *   4 - делаем функцию для компанента падвал [<Footer/>]
 
-				function Footer() {
+#				function Footer() {
 					return (
-						<footer className='footer'>
+^						<footer className='footer'>
 ^							<Logo/>
 ^							<span className="footer__copyright">Создано 2021</span>
-						</footer>
+^						</footer>
 					)
 				}
 *   5 - делаем функцию для компанента [<MainPage/>]
 
-				function MainPage() {
+#				function MainPage() {
 					return (
-						<main>
-^             5.1 делаем функцию для компанента герой [<Hero/>]
-герой				  <Hero/>
-^             5.2 делаем функцию для компанента проимущества [<AdvantagesList/>]
-проимущества	<AdvantagesList/>
-						</main>
+^						<main>
+герой				  <Hero/> // делаем компанент блока герой [<Hero/>]
+проимущества	<AdvantagesList/>//делаем комп. блока проимущества [<AdvantagesList/>]
+^						</main>
 					)
 				}
            --------------------------------------------------------
 
 ^             пошаговое описание блока проимущества [<AdvantagesList/>]
 
-  1 - 5.2 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
+   1 - 5.2 делаем функцию для компанента списка проимуществ [<AdvantagesList/>]
 
-#				function AdvantagesList() {
+				function AdvantagesList() {
 					return (
-						<section className="advantages">
-							<Title>Почему фермерские продукты лучше?</Title>
-							<ui className = "advantages__list">
-#								<li className="advantages__item">
-#           5.2.1 делаем функцию для компанента карточи проимущества[<AdvantageCard/>]
+^						<section className="advantages">
+^							<Title>Почему фермерские продукты лучше?</Title>
+^							<ui className = "advantages__list">
+^								<li className="advantages__item">
+                  5.2.1 делаем функцию для компанента карточи [<AdvantageCard/>]
 проимущество 		  <AdvantageCard/>
-#								</li>
-							</ui>
-							<Button>Купить</Button>
-						</section>
+^								</li>
+^							</ui>
+^							<Button>Купить</Button>
+^						</section>
 					)
 				}
 
-#      5.2.1 делаем функцию для компанента карточи проимущества[<AdvantageCard/>]
+:      5.2.1 делаем функцию для компанента карточи проимущества[<AdvantageCard/>]
 
 function AdvantageCard() {
 	return (
