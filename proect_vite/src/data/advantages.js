@@ -5,7 +5,7 @@ const advantages = [
     owner: "Фермерские продукты",
     isNegative: false,
     image: "/src/assets/icon-1.svg",
-    about:
+    text:
       "Домашняя колбаса из мяса, соли и специй и колбаса из магазина два настолько разных продукта, что они даже не родственники"
   },
   {
@@ -14,7 +14,7 @@ const advantages = [
     owner: "Магазинные продукты",
     isNegative: true,
     image: "/src/assets/icon-2.svg",
-    about:
+    text:
       "Из-за большого количества товара сотрудники магазинов нe успевают своевременно производить замену товара"
   },
   {
@@ -23,7 +23,7 @@ const advantages = [
     owner: "Фермерские продукты",
     isNegative: false,
     image: "/src/assets/icon-3.svg",
-    about:
+    text:
       "Поставляем местные органические продукты, выращенные без пестицидов и химических удобрений."
   },
   {
@@ -32,7 +32,7 @@ const advantages = [
     owner: "Магазинные продукты",
     isNegative: true,
     image: "/src/assets/icon-4.svg",
-    about:
+    text:
       "Мясные полуфабрикаты, в которых содержится чрезмерно много натрия, вредных жиров, консервантов"
   }
 ];
